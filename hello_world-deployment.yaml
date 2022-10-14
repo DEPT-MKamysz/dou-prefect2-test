@@ -1,0 +1,46 @@
+###
+### A complete description of a Prefect Deployment for flow 'Hello Flow'
+###
+name: test-flow
+description: null
+version: e1ac91aa9703f88bef14be16626dd92d
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+tags: []
+parameters: {}
+schedule: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: Hello Flow
+manifest_path: null
+storage:
+  repository: https://github.com/DEPT-MKamysz/dou-prefect2-test.git
+  reference: null
+  _block_document_id: f7b1fd35-c87d-41ec-a924-2602e9e34104
+  _block_document_name: github-storage
+  _is_anonymous: false
+  block_type_slug: github
+  _block_type_slug: github
+path: ''
+entrypoint: flows/test-flow.py:hello_world
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    name:
+      title: name
+      default: World
+  required: null
+  definitions: null
