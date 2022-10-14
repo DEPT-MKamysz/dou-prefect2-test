@@ -5,7 +5,7 @@ name: test-flow
 description: null
 version: e1ac91aa9703f88bef14be16626dd92d
 # The work queue that will handle this deployment's runs
-work_queue_name: default
+work_queue_name: production-queue
 tags: []
 parameters: {}
 schedule: null
