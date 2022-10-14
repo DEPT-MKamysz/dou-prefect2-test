@@ -1,9 +1,10 @@
-from prefect import task, flow
+from prefect import task, flow, get_run_logger
 
 @task
 def print_hello(name):
-    print(f"Hello {name}!")
+    return f"Hello {name}!"
 
 @flow(name = "Hello Flow")
 def hello_world(name = "World"):
-    print_hello(name)
+    logger = get_run_logger()
+    logger.info(print_hello(name))
